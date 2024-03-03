@@ -39,19 +39,20 @@ public class Test {
         login(1, driver, "user2@intros.com", "password2");
 
         // Test case: Correct phone and password
-        
+        login(1, driver, "5172172729", "password1");
+        login(1, driver, "5119724212", "password2");
 
         // Test case: Incorrect email
         login(1, driver, "incorrectemail@example.com", "password123");
 
         // Test case: Incorrect phone
-
+        login(1, driver, "8888888888", "password1");
 
         // Test case: Correct email and incorrect password
         login(1, driver, "user@intros.com", "incorrectpassword");
 
         // Test case: Correct phone and incorrect password
-
+        login(1, driver, "5172172729", "password");
 
         // Test case: Try ten random credentials
         for (int i = 0; i < 10; i++) {
@@ -150,13 +151,9 @@ public class Test {
             else
                 System.out.println("Login failed with email/phone: " + emailOrPhone);
             
-            // Proceed with the next test case or actions for successful login
         } catch (Exception e) {
             System.out.println("Login failed with email/phone: " + emailOrPhone);
-            // Handle the failure or exit the test
-            // For example, you can log the failure, capture error messages, take screenshots, etc.
         }
-        
 
         // Log the login attempt result
         if (isLoggedIn(driver)) {
@@ -166,15 +163,11 @@ public class Test {
             LOGGER.warning("Case - " + caseNo + " Login failed for: " + emailOrPhone + " : " + password);
             return false;
         }
-
-        // Add verification steps here based on your application's behavior after login attempt
-        // For example, you can check for error messages, successful login redirection, etc.
     }
 
     private static boolean isLoggedIn(WebDriver driver) {
         // Get the current URL
         String currentUrl = driver.getCurrentUrl();
-        System.out.println(currentUrl + "******************************");
         
         // Check if the current URL matches the expected URL
         return currentUrl.equals("https://a-react-alpha.vercel.app/target");
@@ -215,7 +208,6 @@ public class Test {
     }
 
     public static String generateRandomEmailOrPhone() {
-        // Generate a random number between 0 and 1
         Random random = new Random();
         int randomNumber = random.nextInt(1000);
         return "user" + randomNumber + "@example.com";
@@ -223,7 +215,6 @@ public class Test {
     }
 
     public static String generateRandomPassword() {
-        // Generate a random password
         return "password" + (new Random().nextInt(1000) + 1);
     }
 }
