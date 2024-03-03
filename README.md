@@ -14,7 +14,6 @@ This repository contains a full-stack application designed to manage user authen
     - `App.js`: Main React component that renders the login page.
     - `GoogleOAuth.js`: Component handling Google OAuth logic.
     - `Login.js`: Login component.
-    - `New.js`: Additional components (if any).
 
 - `test`: Contains Java-based test scripts and resources.
   - `lib`: Libraries needed for running tests.
@@ -26,7 +25,7 @@ Website is live at: https://a-react-alpha.vercel.app/
 
 But if you want to run the code
 1. Clone the repository:
-git clone https://link-to-your-repository.com
+git clone https://github.com/BarkinCinar/CS458-Project1.git
 
 2. Navigate to the backend directory and install dependencies:
 cd CS458-PROJECT-1/a-authentication-main
