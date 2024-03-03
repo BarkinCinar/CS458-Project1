@@ -26,7 +26,6 @@ Website is live at: https://a-react-alpha.vercel.app/
 But if you want to run the code
 1. Clone the repository:
 
-
 git clone https://github.com/BarkinCinar/CS458-Project1.git
 
 2. Navigate to the backend directory and install dependencies:
