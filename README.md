@@ -29,17 +29,23 @@ But if you want to run the code
 git clone https://github.com/BarkinCinar/CS458-Project1.git
 
 2. Navigate to the backend directory and install dependencies:
+
 cd CS458-PROJECT-1/a-authentication-main
+
 npm install
 
 3. Start the backend server:
+
 npm start
 
 4. Navigate to the frontend directory and install dependencies:
+
 cd ../a-react-main/a-react
+
 npm install
 
 5. Start the React development server:
+
 npm start
 
 This should launch the web application on `localhost:3000` in your default web browser.
